@@ -1,5 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe User do
-    it 'has a valid factory'
+RSpec.describe User, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
+  it 'has a valid factory'
 end
