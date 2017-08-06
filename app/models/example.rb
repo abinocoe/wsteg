@@ -3,6 +3,6 @@ class Example < ApplicationRecord
     validates_attachment_content_type :pdf, :content_type => ['application/pdf', 'application/msword', 'text/plain'], :if => :pdf_attached?
 
     def pdf_attached?
-    self.pdf.file?
+        self.pdf.file?
     end
 end
