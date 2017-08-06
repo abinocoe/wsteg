@@ -6,7 +6,7 @@ RSpec.describe Page, type: :model do
     expect(FactoryGirl.build(:user).save).to be true
   end
 
-  it 'sets indexperience to false by default' do
+  it 'sets indexpertise to false by default' do
     page = FactoryGirl.create(:page)
 
     expect(page.indexpertise).to be false
