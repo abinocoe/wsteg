@@ -1,4 +1,4 @@
-class AddAttachmentPdfToExamples < ActiveRecord::Migration
+class AddAttachmentPdfToExamples < ActiveRecord::Migration[5.1]
   def self.up
     change_table :examples do |t|
       t.attachment :pdf
