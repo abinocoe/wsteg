@@ -33,6 +33,8 @@ gem 'devise', '~> 4.2'
 
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
 
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
