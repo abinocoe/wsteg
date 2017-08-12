@@ -1,4 +1,5 @@
 class Example < ApplicationRecord
+    validates :title, presence: true
     has_attached_file :pdf
     validates_attachment_content_type :pdf, :content_type => ['application/pdf', 'application/msword', 'text/plain'], :if => :pdf_attached?
 
