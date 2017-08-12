@@ -1,0 +1,7 @@
+<% @examples.each do |example| %>
+  <div><%= link_to example.title, example.pdf.url, target: '_blank' %></div>
+  
+  <div><%= link_to 'Edit', edit_example_path(example) %></div>
+  <div><%= link_to 'Delete', example_path(example), method: :delete, data: { confirm: 'Are you sure you want to delete this pdf, Steve? This action cannot be undone.' } %></div>
+
+<% end %>

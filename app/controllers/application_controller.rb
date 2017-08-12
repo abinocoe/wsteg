@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
   before_action :populate_nav
 
   def populate_nav
-    @links = Page.all
-
+    @links = Page.where(indexpertise: false)
   end
 end

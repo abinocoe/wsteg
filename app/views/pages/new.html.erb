@@ -1,0 +1,10 @@
+<%= form_for @page, url: {action: "create"} do |f| %>
+    <%= f.label :title %>:<span><%= f.text_field :title %></span>
+    <br/>
+    <%= f.label :body %>:
+    <br/>
+    <%= f.cktext_area :body, :width => 100 %>
+    <%= f.label "Indexpertise?" %> <br />
+    <%= f.check_box :indexpertise %> <br />
+    <%= f.submit %>
+<% end  %>

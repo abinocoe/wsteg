@@ -17,7 +17,7 @@ class ExamplesController < ApplicationController
 
     respond_to do |format|
       if @example.save
-        format.html {redirect_to examples_index_path, notice: 'Indexample was successfully created'}
+        format.html {redirect_to examples_path, notice: 'Indexample was successfully created'}
       else
         format.html {render :new}
       end
@@ -35,10 +35,10 @@ class ExamplesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @example.destroy
     respond_to do |format|
-      format.html { redirect_to examples_url, notice: 'Example was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Example was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -50,6 +50,6 @@ class ExamplesController < ApplicationController
     end
 
     def example_params
-      params.fetch(:page, {}).permit(:title, :publisher, :pdf_file_name)
+      params.fetch(:example, {}).permit(:title, :publisher, :pdf)
     end
 end
