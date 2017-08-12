@@ -38,7 +38,7 @@ class ExamplesController < ApplicationController
   def destroy
     @example.destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Example was successfully destroyed.' }
+      format.html { redirect_to root_path, notice: 'Indexample was successfully deleted.' }
       format.json { head :no_content }
     end
   end
