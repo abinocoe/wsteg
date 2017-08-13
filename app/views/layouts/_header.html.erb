@@ -1,11 +1,14 @@
-<ul id="main-menu">
-  <% @links.each do |link| %>
-      <li><%= link_to link.title, page_path(link) %></li>
-  <% end %>
-  <li><%= link_to 'Indexamples', root_path %></li>
-  <li><%= link_to 'Indexpertise', page_path(@indexpertise) %></li>
-</ul>
+<div id="header">
+  <ul id="main-menu">
+    <% @links.each do |link| %>
+        <li><%= link_to link.title, page_path(link) %></li>
+    <% end %>
+    <li><%= link_to 'Indexamples', root_path %></li>
+    <li><%= link_to 'Indexpertise', page_path(@indexpertise) %></li>
+  </ul>
 
-<% if current_user %>
-  <li id="logout"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>  
+  <% if current_user %>
+    <li id="logout"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>  
 <% end %>
+</div>
+
