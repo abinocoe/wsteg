@@ -4,5 +4,7 @@ class ApplicationController < ActionController::Base
 
   def populate_nav
     @links = Page.where(indexpertise: false)
+    @indexpertise = Page.find_by(title: 'News')
+
   end
 end

@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    @pages = Page.where(indexpertise: true)
   end
 
   # GET /pages/new
