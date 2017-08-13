@@ -1,14 +1,16 @@
 <div id="header">
   <ul id="main-menu">
+    <li>W Stephen Gilbert - Indexer</li>
     <% @links.each do |link| %>
-        <li><%= link_to link.title, page_path(link) %></li>
+        <li><%= link_to link.title.upcase, page_path(link) %></li>
     <% end %>
-    <li><%= link_to 'Indexamples', root_path %></li>
-    <li><%= link_to 'Indexpertise', page_path(@indexpertise) %></li>
+    <li><%= link_to 'INDEXAMPLES', root_path %></li>
+    <li><%= link_to 'INDEXPERTISE', page_path(@indexpertise) %></li>
+
+    <% if current_user %>
+      <li id="logout"><%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %></li>  
+    <% end %>
   </ul>
 
-  <% if current_user %>
-    <li id="logout"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>  
-<% end %>
 </div>
 

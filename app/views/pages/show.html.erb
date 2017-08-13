@@ -1,13 +1,15 @@
 <% if @page.indexpertise %>
-    <ul id="sidebar">
+    <ul class="sidebar">
         <% @pages.each do |page| %>
             <li><%= link_to page.title, page_path(page) %></li>
         <% end %>
     </ul>
 <% end %>
-    
-<h1><%= @page.title  %></h1>
-<div><%= @page.body.html_safe  %></div>
+
+<div class="page-content">
+    <h1><%= @page.title  %></h1>
+    <div><%= @page.body.html_safe  %></div>
+</div>    
 
 <% if current_user %> 
     <%= link_to 'Edit', edit_page_path(@page) %>

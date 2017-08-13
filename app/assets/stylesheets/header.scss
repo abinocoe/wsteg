@@ -1,0 +1,53 @@
+div#header {
+    
+    min-height: 60px;
+    text-align: center;
+    margin: 0 10px;
+    border-bottom: 1px solid grey;
+
+    ul {
+        text-align: right;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 20px;
+        
+        li {
+            list-style: none;
+            display: inline-block;
+            padding: 0 5px;
+            line-height: 70px;
+
+            &:first-of-type {
+                font-family: 'Kaushan Script', cursive;
+                font-size: 1.2em;
+                position: absolute;
+                left: 20px;
+            }
+
+            a {
+            text-decoration: none;
+
+            &:hover {
+                    color: #000080;
+                }
+            }
+        }
+
+        #logout {
+
+            a {
+                color: #FF0000;
+            }
+        }
+    }
+
+    * {
+
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 1rem;
+        color: #000000;
+
+    }
+}
+
