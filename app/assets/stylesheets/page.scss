@@ -1,3 +1,34 @@
-// Place all the styles related to the Page controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+ul.sidebar {
+    width: 150px;
+    list-style: none;
+    padding-left: 0;
+    display: inline-block;
+    vertical-align: top;
+
+    li {
+        height: 2rem;
+        line-height: 2rem;
+
+        a {
+            font-size: 1.5rem;
+            color: #000000;
+            text-decoration: none;
+
+            &:visited {
+                color: grey;
+            }
+            
+            &.active {
+                color: red;
+            }
+        }
+    }
+}
+
+ul.sidebar + div.page-content {
+    max-width: 690px;
+}
+
+div.page-content {
+    display: inline-block;
+}
