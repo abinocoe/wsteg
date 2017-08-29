@@ -4,29 +4,35 @@ ul.sidebar {
     padding-left: 0;
     display: inline-block;
     vertical-align: top;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 5px 0px rgba(147,74,74,0.3);
 
     li {
         height: 2rem;
         line-height: 2rem;
-
+        padding: 5px 10px;
+        border-bottom: 0.5px solid grey;
+        
         a {
             font-size: 1.5rem;
-            color: #000000;
+            color: #745758;
             text-decoration: none;
-
-            &:visited {
-                color: grey;
-            }
+            display: block;
             
             &.active {
-                color: red;
+                color: #e48080;
             }
+        }
+
+        &:last-child {
+                border-bottom: none;
         }
     }
 }
 
 ul.sidebar + div.page-content {
     max-width: 690px;
+    padding-left: 20px;
 }
 
 div.page-content {
