@@ -16,3 +16,5 @@ module Wsteg
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+config.assets.precompile += %w( ckeditor/* )
