@@ -39,6 +39,8 @@ gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 
 gem 'friendly_id', '~> 5.1'
 
+ruby '2.3.4'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
