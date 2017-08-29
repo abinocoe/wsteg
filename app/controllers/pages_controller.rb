@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully created.' }
+        format.html { redirect_to @page, notice: "Page was successfully created." }
         format.json { render :show, status: :created, location: @page }
       else
         format.html { render :new }
@@ -51,7 +51,7 @@ class PagesController < ApplicationController
   def destroy
     @page.destroy
     respond_to do |format|
-      format.html { redirect_to pages_url, notice: 'Page was successfully deleted.' }
+      format.html { redirect_to root_path, notice: 'Page was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -59,7 +59,7 @@ class PagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
-      @page = Page.find(params[:id])
+      @page = Page.find_by_title(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
