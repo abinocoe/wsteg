@@ -2,7 +2,7 @@ class ExamplesController < ApplicationController
   before_action :set_example, only: [:edit, :update, :destroy]
 
   def index
-    @examples = Example.all
+    @examples = Example.all.order('created_at DESC')
   end
 
   def new
