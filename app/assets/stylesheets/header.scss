@@ -6,8 +6,15 @@ div#header {
     box-shadow: 0 3px 5px rgba(147,74,74,0.3);
     background-color: #FFFFFF;
 
+    h1 {
+        font-family: 'Kaushan Script', cursive;
+        font-size: 2rem;
+        margin: 0;
+        padding-top: 10px;
+    }
+
     ul {
-        text-align: right;
+        text-align: center;
         margin: 0 auto;
         padding-left: 0;
         padding-right: 20px;
@@ -17,13 +24,6 @@ div#header {
             display: inline-block;
             padding: 0 5px;
             line-height: 70px;
-
-            &:first-of-type {
-                font-family: 'Kaushan Script', cursive;
-                font-size: 1.2em;
-                position: absolute;
-                left: 20px;
-            }
 
             a {
             text-decoration: none;
