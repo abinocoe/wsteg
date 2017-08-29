@@ -1,13 +1,14 @@
-<% @examples.each do |example| %>
-  <h3><%= link_to example.title, example.pdf.url, target: '_blank' %> <%= example.publisher %></h3>
-  
-  <% if current_user %>
-    <p><%= link_to 'Edit', edit_example_path(example) %></p>
-    <p><%= link_to 'Delete', example_path(example), method: :delete, data: { confirm: 'Are you sure you want to delete this pdf, Steve? This action cannot be undone.' } %></p>
-  <% end %>
+<div class="example-content">
+  <% @examples.each do |example| %>
+    <h3><%= link_to example.title, example.pdf.url, target: '_blank' %> <%= example.publisher %></h3>
+    
+    <% if current_user %>
+      <p><%= link_to 'Edit', edit_example_path(example) %></p>
+      <p><%= link_to 'Delete', example_path(example), method: :delete, data: { confirm: 'Are you sure you want to delete this pdf, Steve? This action cannot be undone.' } %></p>
+    <% end %>
 
-<% end %>
-<% if current_user %>
-  <hr>
-  <p><%= link_to 'Add new pdf example', new_example_path %></p>
-<% end %>
+  <% end %>
+  <% if current_user %>
+    <p><%= link_to 'Add new pdf example', new_example_path %></p>
+  <% end %>
+</div>
