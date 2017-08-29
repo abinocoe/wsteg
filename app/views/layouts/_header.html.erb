@@ -1,17 +1,8 @@
 <div id="header">
   <ul id="main-menu">
-  <%# <%= request.pretty_inspect %>
 
     <li>W Stephen Gilbert - Indexer</li>
-    <% @links.each do |link| %>
-        <li><%= link_to link.title.upcase, page_path(link), class: current_class?(page_path(link)) %></li>
-    <% end %>
-    <li><%= link_to 'INDEXAMPLES', root_path, class: current_class?(root_path) %></li> 
-    <li><%= link_to 'INDEXPERTISE', page_path(@indexpertise), class: current_class?(@indexpertise) %></li>
 
-    <% if current_user %>
-      <li id="logout"><%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %></li>  
-    <% end %>
   </ul>
 
 </div>
