@@ -1,7 +1,7 @@
 <%= form_for @example, url: {action: "create"} do |f| %>
     <%= f.label :title %>
     <%= f.text_field :title %>
-    <%= f.label :publisher %>
+    <%= f.label "Publisher (including preposition such as 'for Eyewear')" %>
     <%= f.text_field :publisher %>
     <%= f.label :pdf %>
     <%= f.file_field :pdf %>
