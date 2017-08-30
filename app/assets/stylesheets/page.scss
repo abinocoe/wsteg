@@ -35,11 +35,24 @@ ul.sidebar + div.page-content {
     padding-left: 20px;
 }
 
-div.page-content {
+div.portrait {
+    max-width: 445px;
     display: inline-block;
+    margin-top: 30px;
+
+    img {
+        width: 100%;
+    }
 }
 
-div.contact {
-    display: block;
+div.portrait + div.page-content {
     text-align: center;
+    width: 445px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+div.page-content {
+    display: inline-block;
 }
