@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'examples#index'
+  root 'pages#show', id: 'Contact'
 
   authenticated :user do
     resources :pages, :examples, only: [:new, :create, :edit, :update, :destroy]
