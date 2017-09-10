@@ -26,13 +26,13 @@ div#header {
 
             a {
             text-decoration: none;
-
-                &:hover {
-                    color: #FFD5FF;
-                }
-
+                
                 &.active {
-                    color: #e48080;
+                    color: #E48080;
+                }
+                
+                &:hover {
+                    color: #DE6060;
                 }
             }
         }
