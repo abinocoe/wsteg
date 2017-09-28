@@ -5,11 +5,12 @@
     <% @links.each do |link| %>
         <li><%= link_to link.title.upcase, page_path(link), class: current_class?(page_path(link)) %></li>
     <% end %>
-    <li><%= link_to 'INDEXAMPLES', examples_path, class: current_class?(examples_path) %></li> 
 
     <% if @indexpertise %>
       <li><%= link_to 'INDEXPERTISE', page_path(@indexpertise), class: current_class?(@indexpertise) %></li>
     <% end %>
+
+    <li><%= link_to 'INDEXAMPLES', examples_path, class: current_class?(examples_path) %></li> 
 
     <% if @post_links %>
       <% @post_links.each do |link| %>
