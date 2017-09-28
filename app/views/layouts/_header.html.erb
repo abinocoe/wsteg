@@ -11,6 +11,12 @@
       <li><%= link_to 'INDEXPERTISE', page_path(@indexpertise), class: current_class?(@indexpertise) %></li>
     <% end %>
 
+    <% if @post_links %>
+      <% @post_links.each do |link| %>
+          <li><%= link_to link.title.upcase, page_path(link), class: current_class?(page_path(link)) %></li>
+      <% end %>
+    <% end %>
+
     <% if current_user %>
       <li id="logout"><%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %></li>  
     <% end %>
