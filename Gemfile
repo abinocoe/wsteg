@@ -33,9 +33,9 @@ gem 'devise', '~> 4.2'
 
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
 
-gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'paperclip', '~> 5.2', '>= 5.2'
 
-gem 'aws-sdk', '<2.0'
+gem 'aws-sdk', '~>2'
 
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 
