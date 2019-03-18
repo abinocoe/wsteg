@@ -93,7 +93,7 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 
-  require 'factory_girl_rails'
-  config.include FactoryGirl::Syntax::Methods
+  require 'factory_bot_rails'
+  config.include FactoryBot::Syntax::Methods
 
 end

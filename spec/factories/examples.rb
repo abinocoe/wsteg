@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :example do
     title "MyString"
     publisher "MyString"

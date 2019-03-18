@@ -18,7 +18,7 @@ RSpec.describe PagesController, type: :controller do
 
   describe "GET #edit" do
     it "returns http success" do
-      @page = FactoryGirl.create(:page).id
+      @page = FactoryBot.create(:page).id
       get :edit
       expect(response).to have_http_status(:success)
     end
