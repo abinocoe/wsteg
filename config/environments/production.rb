@@ -14,17 +14,14 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # Attempt to read encrypted secrets from `config/secrets.yml.enc`.
-  # Requires an encryption key in `ENV["RAILS_MASTER_KEY"]` or
-  # `config/secrets.yml.key`.
-  config.read_encrypted_secrets = true
+  # Secrets are handled via Rails credentials in Rails 7+
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = :terser
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
@@ -89,17 +86,19 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  # AWS paperclip links
-  config.paperclip_defaults = {
-    storage: :s3,
-    url: ':s3_domain_url',
-    path: '/:class/:attachment/:id_partition/:style/:filename',
-    s3_host_name: 's3-eu-west-2.amazonaws.com',
-    s3_credentials: {
-      bucket: ENV.fetch('S3_BUCKET_NAME'),
-      access_key_id: ENV.fetch('AWS_ACCESS_KEY_ID'),
-      secret_access_key: ENV.fetch('AWS_SECRET_ACCESS_KEY'),
-      s3_region: ENV.fetch('AWS_REGION'),
+  # AWS paperclip/kt-paperclip S3 config (only if env vars are set)
+  if ENV['S3_BUCKET_NAME'].present?
+    config.paperclip_defaults = {
+      storage: :s3,
+      url: ':s3_domain_url',
+      path: '/:class/:attachment/:id_partition/:style/:filename',
+      s3_host_name: 's3-eu-west-2.amazonaws.com',
+      s3_credentials: {
+        bucket: ENV['S3_BUCKET_NAME'],
+        access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+        s3_region: ENV['AWS_REGION'],
+      }
     }
-  }
+  end
 end

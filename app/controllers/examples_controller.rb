@@ -28,7 +28,7 @@ class ExamplesController < ApplicationController
 
     respond_to do |format|
       if @example.update(example_params)
-        format.html {redirect_to examples_route, notice: 'Indexample was successfully updated'}
+        format.html {redirect_to examples_path, notice: 'Indexample was successfully updated'}
       else
         format.html {render :edit, notice: 'Something went wrong'}
       end

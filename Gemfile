@@ -7,22 +7,29 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.3'
+gem 'rails', '~> 7.1.0'
+# Ruby 3.4 removed these from stdlib, but Rails 5.x needs them
+gem 'bigdecimal'
+gem 'mutex_m'
+gem 'drb'
+gem 'benchmark'
+gem 'observer'
+gem 'logger'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 6.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'terser'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbo-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -33,9 +40,9 @@ gem 'devise', '~> 4.2'
 
 gem 'ckeditor', '~> 4.2', '>= 4.2.4'
 
-gem 'paperclip', '~> 5.2', '>= 5.2'
+gem 'kt-paperclip', '~> 7.2'
 
-gem 'aws-sdk', '~>2'
+gem 'aws-sdk-s3', '~> 1.0'
 
 gem 'normalize-rails', '~> 4.1', '>= 4.1.1'
 
@@ -54,16 +61,16 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem "database_cleaner"
   gem "rspec-rails"
-  gem 'factory_bot_rails', '~> 4.8.2'
+  gem 'factory_bot_rails'
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  # Spring disabled - not compatible with Ruby 3.4
+  # gem 'spring'
+  # gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
