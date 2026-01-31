@@ -86,6 +86,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Store uploaded files locally (Active Storage)
+  config.active_storage.service = :local
+
   # AWS paperclip/kt-paperclip S3 config (only if env vars are set)
   if ENV['S3_BUCKET_NAME'].present?
     config.paperclip_defaults = {
